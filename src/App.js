@@ -15,7 +15,6 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("1");
     getData(city[0], city[1])
       .then((res) => {
         setData(dataMap(res));
@@ -42,7 +41,6 @@ function App() {
     const currentCityDirections = CITIES.find(
       (item) => item.name === currentCity
     ).directions;
-    console.log(currentCityDirections);
     setCity(currentCityDirections);
   };
 
